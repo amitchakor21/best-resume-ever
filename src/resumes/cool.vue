@@ -48,10 +48,6 @@
           </div>
 
           <div class="section-content section-content--plain">
-            <div class="section-link">
-              <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
-            </div>
-
             <a
               class="section-link link"
               :href="contactLinks.email">
@@ -91,12 +87,12 @@
             </a>
           </div>
 
-          <div class="section">
+          <div class="section-left">
             <div class="section-headline">
               <i class="section-headline__icon material-icons">book</i>{{ lang.courses }}
             </div>
 
-            <div class="section-content">
+            <div class="section-content-left">
               <a
                 v-for="(course, index) in person.courses"
                 class="section-content__item"
@@ -106,7 +102,7 @@
 
                 <span class="section-content__header"> {{ course.name }} </span>
                 <span class="section-content__subheader">{{ course.degree }}</span>
-                <span class="section-content__text"> {{ course.timeperiod }} </span>
+                <span class="section-content__text italic-timeline"> ({{ course.timeperiod }}) </span>
                 <span class="section-content__text--light"> {{ course.description }} </span>
               </a>
             </div>
@@ -128,13 +124,14 @@
               :class="{ link: experience.website !== undefined}"
               :href="experience.website">
 
-              <span class="section-content__header">{{ experience.position }}</span>
+              <div>
+                <span class="section-content__header display-inline">{{ experience.position }}</span>
+                <span class="section-content__text display-inline italic-timeline">({{ experience.timeperiod }})</span>
+              </div>
               <span class="section-content__subheader">
                 {{ experience.company }}
                 <span class="section-content__plain">{{ experience.location }}</span>
               </span>
-
-              <div class="section-content__text">{{ experience.timeperiod }}</div>
               <span class="section-content__text--light">{{ experience.description }}</span>
             </a>
           </div>
@@ -153,9 +150,12 @@
               :class="{ link: education.website !== undefined}"
               :href="education.website">
 
-              <span class="section-content__header"> {{ education.school }} </span>
-              <span class="section-content__subheader">{{ education.degree }}</span>
-              <span class="section-content__text"> {{ education.timeperiod }} </span>
+              <div>
+                <span class="section-content__header display-inline"> {{ education.degree }} </span>
+                <span class="section-content__text display-inline grade"> ({{ education.grade }}) </span>
+                <span class="section-content__text display-inline italic-timeline"> ({{ education.timeperiod }}) </span>
+              </div>
+              <span class="section-content__subheader">{{ education.school }}</span>
               <span class="section-content__text--light"> {{ education.description }} </span>
             </a>
           </div>
@@ -163,18 +163,32 @@
 
         <div
           v-if="person.projects"
-          class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
-          </div>
+              class="section">
+              <div class="section-headline">
+                <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
+              </div>
 
-          <div class="section-content">
-            <a v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item"
-              :class="{ link: project.url !== undefined}"
-              :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__subheader">{{ project.platform }}</span>
+              <div class="section-content">
+                <a v-for="(project, index) in person.projects" :key="index"
+                   class="section-content__item"
+                   :class="{ link: project.url !== undefined}"
+                   :href="project.url">
+                  <div>
+                    <span class="section-content__header display-inline"> {{ project.name }} </span>
+                    <span class="section-content__text display-inline italic-timeline"> ({{ project.timeperiod }}) </span>
+                  </div>
+                  <div class="section-content-grid-project-infra">
+                <a
+                  v-for="(platform, index) in project.platform.split(',')"
+                  class="grid-item"
+                  :key="index"
+                  :class="{ link: platform.url !== undefined}"
+                  :href="platform.url">
+              <span class="squarred-grid-item-project-infra">
+                {{ platform }}
+              </span>
+                </a>
+              </div>
               <span class="section-content__text"> {{ project.description }} </span>
             </a>
           </div>
@@ -223,8 +237,6 @@
         </div>
       </div>
     </div>
-
-    <img class="picture"/>
   </div>
 </template>
 
@@ -240,7 +252,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 @accent-color: #34495E;
 @banner-color: #42b883;
-@banner-height: 100px;
+@banner-height: 65px;
 @picture-size: 120px;
 @picture-offset: 35px;
 @base-padding: 30px;
@@ -329,6 +341,10 @@ export default Vue.component(name, getVueOptions(name));
   margin: 20px 0;
 }
 
+.section-left {
+  margin: 30px 0;
+}
+
 .section-link,
 .section-headline {
   display: flex !important;
@@ -360,7 +376,54 @@ export default Vue.component(name, getVueOptions(name));
 
   &__item {
     display: block;
+    margin-bottom: 8px;
+  }
+
+  &__header {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  &__subheader {
+    display: block;
+    font-weight: 400;
+  }
+
+  &__plain,
+  &__text {
+    display: block;
+    font-size: 12px;
+
+    &--light {
+      font-size: 12px;
+    }
+  }
+
+  &__plain {
+    display: inline;
+    font-weight: 300;
+  }
+
+  &__item-grid {
+    flex: 1 1 0;
     margin-bottom: 5px;
+    padding-right: 5px;
+  }
+
+  &--plain {
+    padding: 0;
+  }
+}
+
+.section-content-left {
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+
+  &__item {
+    display: block;
+    margin-bottom: 8px;
   }
 
   &__header {
@@ -413,6 +476,13 @@ export default Vue.component(name, getVueOptions(name));
   margin-bottom: 5px;
 }
 
+.section-content-grid-project-infra {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
 .grid-item {
   padding-right: 5px;
 }
@@ -420,8 +490,33 @@ export default Vue.component(name, getVueOptions(name));
 .squarred-grid-item {
   display: block;
   border: 1px solid white;
+  border-radius: 4px;
   color: white;
   margin-top: 5px;
-  padding: 5px;
+  padding: 4px;
+}
+
+.squarred-grid-item-project-infra {
+  display: block;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+  margin-top: 2px;
+  padding: 2px;
+  font-size: 9px;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.italic-timeline {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.grade{
+  font-weight: 400;
+  font-style: normal;
 }
 </style>

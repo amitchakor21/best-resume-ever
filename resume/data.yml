@@ -32,6 +32,7 @@ experience:
   position: Robocon Team Lead
   timeperiod: June 2018 - June 2019
   description: Represented college as a team leader, and Robots Operator at DD ROBOCON INDIA 2019.
+  website: https://drive.google.com/drive/folders/1V0xzvFTcRkz6vPXiEXHq5B3gNHaCYQRc
 
 - company: PICT Robotics
   position: Robocon Participant
@@ -39,9 +40,11 @@ experience:
   description: Participated in Robocon 2017 and 2018. Contributed in prototyping and cad modelings.
 
 education:
-- degree: Bachelor of Engineering
-  timeperiod: June 2016 - June 2020
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Bachelor of Engineering (IT)
+#  school: Pune Institute of Computer Technology
+  timeperiod: 2016 - 2020
+  description: Pune Institute of Computer Technology. Major as Computer Science.
+  grade: 8.62/10
 #  website: https://example.com
 
 # skill level goes from 0 to 100
@@ -105,7 +108,7 @@ courses:
 
 achievements:
 - name: DD Robocon India 2019 - All India Rank 14 among 100+ teams.
-- name: Received Appreciation From College Principal for the Inventory Management Project.
+- name: Received Appreciation from the College's Principal for the Inventory Management Project.
 
 contact:
   email: amitchakor21@email.com
