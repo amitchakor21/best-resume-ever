@@ -90,6 +90,27 @@
               <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
             </a>
           </div>
+
+          <div class="section">
+            <div class="section-headline">
+              <i class="section-headline__icon material-icons">book</i>{{ lang.courses }}
+            </div>
+
+            <div class="section-content">
+              <a
+                v-for="(course, index) in person.courses"
+                class="section-content__item"
+                :key="index"
+                :class="{ link: course.url !== undefined}"
+                :href="course.url">
+
+                <span class="section-content__header"> {{ course.name }} </span>
+                <span class="section-content__subheader">{{ course.degree }}</span>
+                <span class="section-content__text"> {{ course.timeperiod }} </span>
+                <span class="section-content__text--light"> {{ course.description }} </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -147,9 +168,9 @@
             <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
           </div>
 
-          <div class="section-content-grid">
+          <div class="section-content">
             <a v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item-grid"
+              class="section-content__item"
               :class="{ link: project.url !== undefined}"
               :href="project.url">
               <span class="section-content__header"> {{ project.name }} </span>
@@ -181,6 +202,25 @@
             </a>
           </div>
         </div>
+
+        <div
+          v-if="person.achievements"
+          class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon fa fa-trophy"></i>{{lang.achievements}}
+          </div>
+
+          <div class="section-content">
+            <a
+              v-for="(contribution, index) in person.achievements"
+              class="section-content__item"
+              :key="index"
+              :class="{ link: contribution.url !== undefined}"
+              :href="contribution.url">
+              <span class="section-content-achievement-header"> {{ contribution.name }} </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -200,7 +240,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 @accent-color: #34495E;
 @banner-color: #42b883;
-@banner-height: 120px;
+@banner-height: 100px;
 @picture-size: 120px;
 @picture-offset: 35px;
 @base-padding: 30px;
@@ -358,6 +398,12 @@ export default Vue.component(name, getVueOptions(name));
   &--plain {
     padding: 0;
   }
+}
+
+.section-content-achievement-header{
+  display: block;
+  font-size: 0.9em;
+  font-weight: 400;
 }
 
 .section-content-grid {
