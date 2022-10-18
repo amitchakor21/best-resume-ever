@@ -69,6 +69,11 @@ skills:
 knowledge: Also proficient in 3D modelings and mechatronics
 
 projects:
+- name: GRE vocabulary web app
+  platform: AngularJs, HTML, CSS, Mongodb, Spring boot
+  timeperiod: March 2021
+  description: A web based app to learn english words using flashcards. Contains 5k words for GRE and IELTS. Key features are Progress tracking, Words selection, Phonetics and Auto-play Flashcards.
+  url: https://github.com/amitchakor21/gre-vocab
 - name: Home Automation
   platform: Arduino, Raspeberry Pie, Python, Mongodb, Android, Esp32 cam modules
   timeperiod: March 2020
@@ -76,14 +81,9 @@ projects:
   url: https://linkmix.co/12097150
 - name: Inventory Management
   platform: JSP, HTML, CSS, Mysql, Tomcat
-  timeperiod: March 2020
+  timeperiod: October 2018
   description: A web based app to maintain inventory of the laboratories. Similar to any book’s library where objects are issued to users and tracked.
   url: https://github.com/amitchakor21/Stock-managment-PICT
-- name: GRE vocabulary web app
-  platform: AngularJs, HTML, CSS, Mongodb, Spring boot
-  timeperiod: March 2021
-  description: A web based app to learn english words using flashcards. Contains 5k words for GRE and IELTS. Key features are Progress tracking, Words selection, Phonetics and Auto-play Flashcards.
-  url: https://github.com/amitchakor21/gre-vocab
 
 # optional, not all resume templates have hobbies included
 hobbies:
