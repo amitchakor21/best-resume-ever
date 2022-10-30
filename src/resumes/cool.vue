@@ -13,7 +13,7 @@
             {{ lang.about }}
           </div>
 
-          <div class="section-content section-content--plain">
+          <div class="section-content section-content--plain section-text-justified">
             {{ person.about }}
             <br/>
             <br/>
@@ -102,7 +102,7 @@
 
                 <span class="section-content__header"> {{ course.name }} </span>
                 <span class="section-content__subheader">{{ course.degree }}</span>
-                <span class="section-content__text italic-timeline"> ({{ course.timeperiod }}) </span>
+                <span class="section-content__text italic-timeline">{{ course.timeperiod }}</span>
                 <span class="section-content__text--light"> {{ course.description }} </span>
               </a>
             </div>
@@ -125,8 +125,8 @@
               :href="experience.website">
 
               <div>
-                <span class="section-content__header display-inline">{{ experience.position }}</span>
-                <span class="section-content__text display-inline italic-timeline">({{ experience.timeperiod }})</span>
+                <span class="section-content__header display-inline"> {{ experience.position }} </span>
+                <span class="section-content__text display-inline italic-timeline"> {{ experience.timeperiod }} </span>
               </div>
               <span class="section-content__subheader">
                 {{ experience.company }}
@@ -152,8 +152,8 @@
 
               <div>
                 <span class="section-content__header display-inline"> {{ education.degree }} </span>
-                <span class="section-content__text display-inline grade"> ({{ education.grade }}) </span>
-                <span class="section-content__text display-inline italic-timeline"> ({{ education.timeperiod }}) </span>
+                <span class="section-content__text display-inline grade"> {{ education.grade }} </span>
+                <span class="section-content__text display-inline italic-timeline"> {{ education.timeperiod }} </span>
               </div>
               <span class="section-content__subheader">{{ education.school }}</span>
               <span class="section-content__text--light"> {{ education.description }} </span>
@@ -175,7 +175,7 @@
                    :href="project.url">
                   <div>
                     <span class="section-content__header display-inline"> {{ project.name }} </span>
-                    <span class="section-content__text display-inline italic-timeline"> ({{ project.timeperiod }}) </span>
+                    <span class="section-content__text display-inline italic-timeline"> {{ project.timeperiod }} </span>
                   </div>
                   <div class="section-content-grid-project-infra">
                 <a
@@ -231,7 +231,8 @@
               :key="index"
               :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
-              <span class="section-content-achievement-header"> {{ contribution.name }} </span>
+              <span class="section-content-achievement-header display-inline"> {{ contribution.name }} </span>
+              <span class="section-content__text display-inline italic-timeline"> {{ contribution.timeperiod }} </span>
             </a>
           </div>
         </div>
@@ -518,5 +519,9 @@ export default Vue.component(name, getVueOptions(name));
 .grade{
   font-weight: 400;
   font-style: normal;
+}
+
+.section-text-justified{
+  text-align: justify;
 }
 </style>

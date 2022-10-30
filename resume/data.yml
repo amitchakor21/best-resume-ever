@@ -5,10 +5,8 @@ name:
   first: Amit
   middle:
   last: Chakor
-about: Hi, my name is Amit Chakor. I'm just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+about: Hi!! I’m an IT Engineer who loves to bring IDEAS into reality. Being a Technology enthusiast, I love to stay up to date with Web designing, AI, and Robotics. You will mostly find my PC Ram primarily busy with VS Code, Matlab, and Solidworks. Besides tech, believing in loyalty, customer satisfaction, and striving for simplest solution helps me stay motivated.
+position: Software Engineer
 
 #birth:
 #  year: 1990
@@ -19,32 +17,32 @@ position: Software Developer
 experience:
 - company: IDeaS a sas company
   position: Software Engineer
-  timeperiod: since August 2020
+  timeperiod: (since August 2020)
   description: I am working on Business monitoring, Autonomous product rollout, and Foundation services of the company. Made these applications using Spring Boot microservices, AngularJS, AWS, Terraform, Datadog monitoring, etc..
 #  website: https://example.com
 
 - company: Adamant Engineer Private Limited
   position: Robotics Intern
-  timeperiod: June 2020 - July 2020
-  description: Created a 2-axis filament winding machine(CNC) to produce FRP tubes and shafts.
+  timeperiod: (June 2020 - July 2020)
+  description: Created a 2-axis filament winding machine(CNC) to produce FRP tubes.
 
 - company: PICT Robotics
   position: Robocon Team Lead
-  timeperiod: June 2018 - June 2019
+  timeperiod: (June 2018 - June 2019)
   description: Represented college as a team leader, and Robots Operator at DD ROBOCON INDIA 2019.
   website: https://drive.google.com/drive/folders/1V0xzvFTcRkz6vPXiEXHq5B3gNHaCYQRc
 
 - company: PICT Robotics
   position: Robocon Participant
-  timeperiod: August 2016 - June 2018
+  timeperiod: (August 2016 - June 2018)
   description: Participated in Robocon 2017 and 2018. Contributed in prototyping and cad modelings.
 
 education:
 - degree: Bachelor of Engineering (IT)
 #  school: Pune Institute of Computer Technology
-  timeperiod: 2016 - 2020
+  timeperiod: (2016 - 2020)
   description: Pune Institute of Computer Technology. Major as Computer Science.
-  grade: 8.62/10
+  grade: (8.62/10)
 #  website: https://example.com
 
 # skill level goes from 0 to 100
@@ -66,22 +64,22 @@ skills:
 - name: Docker
   level: 99
 
-knowledge: Also proficient in 3D modelings and mechatronics
+#knowledge: Also proficient in 3D modelings and mechatronics
 
 projects:
 - name: GRE vocabulary web app
   platform: AngularJs, HTML, CSS, Mongodb, Spring boot
-  timeperiod: March 2021
+  timeperiod: (March 2021)
   description: A web based app to learn english words using flashcards. Contains 5k words for GRE and IELTS. Key features are Progress tracking, Words selection, Phonetics and Auto-play Flashcards.
   url: https://github.com/amitchakor21/gre-vocab
 - name: Home Automation
   platform: Arduino, Raspeberry Pie, Python, Mongodb, Android, Esp32 cam modules
-  timeperiod: March 2020
+  timeperiod: (March 2020)
   description: A smart homes IOT solution to control home appliances and track the usage
   url: https://linkmix.co/12097150
 - name: Inventory Management
   platform: JSP, HTML, CSS, Mysql, Tomcat
-  timeperiod: October 2018
+  timeperiod: (October 2018)
   description: A web based app to maintain inventory of the laboratories. Similar to any book’s library where objects are issued to users and tracked.
   url: https://github.com/amitchakor21/Stock-managment-PICT
 
@@ -102,13 +100,17 @@ hobbies:
 
 courses:
 - name: Robotics Specialization by University of Pennsylvania
-  timeperiod: September 2022 - October 2022
+  timeperiod: (September 2022 - October 2022)
 #  description: Completed all 6 courses within specialization. Aerial Robotics, Mobility, Computational Motion Planning, Perception, Estimation and Learning, Capstone.
   url: https://www.coursera.org/account/accomplishments/specialization/Q7NY3U4JN3Q2
 
 achievements:
-- name: DD Robocon India 2019 - All India Rank 14 among 100+ teams.
+- name: Second Runner up in PICT Impetus and Concepts projects competition. Displayed home automation project.
+  timeperiod: (May 2020)
+- name: DD Robocon India - All India Rank 14 among 100+ teams.
+  timeperiod: (June 2019)
 - name: Received Appreciation from the College's Principal for the Inventory Management Project.
+  timeperiod: (August 2018)
 
 contact:
   email: amitchakor21@email.com
