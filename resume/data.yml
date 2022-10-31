@@ -83,7 +83,7 @@ projects:
   platform: Arduino, Raspeberry Pie, Python, Mongodb, Android, Esp32 cam modules, MQTT
   timeperiod: (March 2020)
   description: A smart homes IOT solution to control home appliances and track the usage
-  url: https://linkmix.co/12097150
+  url: https://linkmix.co/12388673
 - name: Inventory Management
   platform: JSP, HTML, CSS, Mysql, Tomcat
   timeperiod: (October 2018)
