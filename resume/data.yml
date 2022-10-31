@@ -5,7 +5,7 @@ name:
   first: Amit
   middle:
   last: Chakor
-about: Hi!! I’m an IT Engineer who loves to bring IDEAS into reality. Being a Technology enthusiast, I love to stay up to date with Web designing, AI, and Robotics. You will mostly find my PC Ram primarily busy with VS Code, Matlab, and Solidworks. Besides tech, believing in loyalty, customer satisfaction, and striving for simplest solution helps me stay motivated.
+about: Hi!! I’m an IT Engineer who loves to bring ideas into reality. Being a Technology enthusiast, I love to stay up to date with Web designing, AI, and Robotics. You will mostly find my PC Ram primarily busy with VS Code, Matlab, and Solidworks. Besides tech, believing in loyalty, customer satisfaction, and striving for simplest solution helps me stay motivated.
 position: Software Engineer
 
 #birth:
@@ -36,6 +36,7 @@ experience:
   position: Robocon Participant
   timeperiod: (August 2016 - June 2018)
   description: Participated in Robocon 2017 and 2018. Contributed in prototyping and cad modelings.
+  website: https://drive.google.com/drive/folders/1V0xzvFTcRkz6vPXiEXHq5B3gNHaCYQRc
 
 education:
 - degree: Bachelor of Engineering (IT)
@@ -47,22 +48,28 @@ education:
 
 # skill level goes from 0 to 100
 skills:
-- name: Java
-  level: 99
-- name: Python
-  level: 95
-- name: JavaScript
-  level: 97
 - name: C C++
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
+  level: 95
+- name: Java
+  level: 95
+- name: Matlab
+  level: 90
+- name: OpenCV
+  level: 90
+- name: Solidworks
   level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
+- name: Python
+  level: 100
+- name: JavaScript
+  level: 100
+- name: AngularJs
+  level: 100
+- name: Android Studio
+  level: 80
+- name: AWS
+  level: 90
+- name: Tensorflow
+  level: 90
 
 #knowledge: Also proficient in 3D modelings and mechatronics
 
@@ -73,7 +80,7 @@ projects:
   description: A web based app to learn english words using flashcards. Contains 5k words for GRE and IELTS. Key features are Progress tracking, Words selection, Phonetics and Auto-play Flashcards.
   url: https://github.com/amitchakor21/gre-vocab
 - name: Home Automation
-  platform: Arduino, Raspeberry Pie, Python, Mongodb, Android, Esp32 cam modules
+  platform: Arduino, Raspeberry Pie, Python, Mongodb, Android, Esp32 cam modules, MQTT
   timeperiod: (March 2020)
   description: A smart homes IOT solution to control home appliances and track the usage
   url: https://linkmix.co/12097150
@@ -115,8 +122,6 @@ achievements:
 contact:
   email: amitchakor21@email.com
   phone: +91 7040406398
-  street: Pune India
-  city: New York
   website: amitchakor21.github.io
   github: amitchakor21
   linkedin: amit-chakor-b8a275215
