@@ -87,7 +87,7 @@ projects:
 - name: Inventory Management
   platform: JSP, HTML, CSS, Mysql, Tomcat
   timeperiod: (October 2018)
-  description: A web based app to maintain inventory of the laboratories. Similar to any book’s library where objects are issued to users and tracked.
+  description: A web based app to maintain inventory of the laboratories. Similar to any books' library where objects are issued to users and tracked.
   url: https://github.com/amitchakor21/Stock-managment-PICT
 
 # optional, not all resume templates have hobbies included
